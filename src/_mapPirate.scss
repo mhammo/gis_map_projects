@@ -1,0 +1,225 @@
+$color-svg-background: #f4e3c5 ;
+$color-svg-country: #8b6e43;
+$color-svg-country-alt: $color-svg-country;
+$color-country-shadow: #b69e6a;
+$font-map: 'OldLondon';
+
+$color-route: #882919;
+$color-frigate: #194588;
+$color-sloop: #19883e;
+$color-sloop-of-war: #f05a15;
+$color-ship-of-the-line: #5f1988;
+
+.map__compass {
+  opacity: 0.9;
+  path {
+    fill: darken($color-svg-country, 5);
+  }
+  .map__compass__ring {
+    stroke: darken($color-svg-country, 5);
+    fill: none;
+  }
+  .map__compass__dot {
+    fill: darken($color-svg-country, 5);
+  }
+}
+
+.svg__legend__color {
+  stroke: $color-svg-country;
+  stroke-width: 2px;
+  fill: $color-route;
+  fill-opacity: 0.7;
+}
+
+.svg__legend__item {
+  .svg__legend__text {
+    fill: darken($color-svg-country, 10);
+    font-size: 1.3em;
+    font-family: $font-map;
+  }
+
+  &.svg__legend__item--frigate {
+    .svg__legend__color {
+      fill: $color-frigate;
+    }
+  }
+  &.svg__legend__item--sloop {
+    .svg__legend__color {
+      fill: $color-sloop;
+    }
+  }
+  &.svg__legend__item--sloop-of-war {
+    .svg__legend__color {
+      fill: $color-sloop-of-war;
+    }
+  }
+  &.svg__legend__item--ship-of-the-line {
+    .svg__legend__color {
+      fill: $color-ship-of-the-line;
+    }    
+  }
+}
+
+.svg__routes {
+  .svg__route {
+      fill: none;
+      stroke: $color-route;
+      mix-blend-mode: lighten;
+      z-index: 1;
+
+      &.svg__route--frigate {
+        stroke: $color-frigate;
+      }
+      &.svg__route--sloop {
+        stroke: $color-sloop;
+      }
+      &.svg__route--sloop-of-war {
+        stroke: $color-sloop-of-war;
+      }
+      &.svg__route--ship-of-the-line {
+        stroke: $color-ship-of-the-line;
+      }
+  }
+  .svg__routepoint {
+    fill: #96392a;
+    z-index: 999;
+    mix-blend-mode: none;
+
+    &.svg__routepoint--frigate {
+      fill: $color-frigate;
+    }
+    &.svg__routepoint--sloop {
+      fill: $color-sloop;
+    }
+    &.svg__routepoint--sloop-of-war {
+      fill: $color-sloop-of-war;
+    }
+    &.svg__routepoint--ship-of-the-line {
+      fill: $color-ship-of-the-line;
+    }
+  }
+
+  .svg__dashroute {
+    fill: none;
+    stroke: $color-svg-background;
+    stroke-dasharray: 2 4;
+    stroke-dashoffset: -1;
+    stroke-width: 1;
+    mix-blend-mode: darken;
+    z-index: 1;
+  } 
+}
+
+button.timeline__controls {
+    padding: 0.5em 1em;
+    color: darken($color-svg-country, 10);
+    background: $color-svg-background;
+    
+    border: none;
+    transition: .2s all;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-svg-background;
+      color: $color-route;
+      text-decoration: underline;
+    }
+
+    &:focus {
+        color: $color-route;
+        background: $color-svg-background;
+        text-decoration: underline;
+    }
+}
+
+h1,h2 {
+    text-align: center;    
+    color: $color-svg-country;
+}
+
+.timeline__controls--progress {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 400px; /* Full-width */
+    height: 2px; /* Specified height */
+    margin: 25px 0;
+    background: darken($color-svg-country, 10); /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    float: right;
+  }
+
+  .timeline__controls--progress::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 5px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: darken($color-svg-country, 10); /* Green background */
+    border: none;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .timeline__controls--progress::-moz-range-thumb {
+    width: 5px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: darken($color-svg-country, 10); /* Green background */
+    border: none;
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.timeline__container {
+    background: $color-svg-background;
+    font-family: $font-map;    
+    font-size: 1.3em;
+    display: inline-flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+}
+
+.svg__routeMap {
+  background: $color-svg-background;
+}
+
+pattern {
+  rect {
+      fill: darken($color-svg-background, 5);
+  }
+  path {        
+      stroke: darken($color-svg-background, 10);
+  }
+}
+
+.svg__world {
+  path {
+      fill: darken($color-svg-background, 8);
+      stroke: $color-svg-country;
+      filter: drop-shadow( 0 5px 5px $color-country-shadow);
+  }
+}
+
+
+.svg__timer {
+  color: darken($color-svg-country, 10);
+  background: $color-svg-background;
+  justify-self: flex-end;
+}
+
+.svg__route__group {
+  opacity: 0;  
+}
+
+
+.map__container {  
+  box-shadow: 0px 0px 0px 2px $color-svg-country;
+  height: auto;
+  width: auto;
+}
+
+.map__frame {
+  padding: 40px;
+  padding-top: 0px;
+  width: 90%;
+  background: $color-svg-background;
+  box-shadow: 0px 0px 15px 2px #888888;
+}

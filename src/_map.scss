@@ -1,0 +1,124 @@
+
+$color-svg-background: #060e35;
+$color-svg-country-alt: $color-svg-background;
+$color-svg-country: #6e84ff;
+$color-svg-route: #00e7b5;
+$color-country-shadow: transparent;
+$font-map: 'Roobert';
+
+// $color-svg-background: #f4e3c5 ;
+// $color-svg-country: #c49f6b;
+// $color-svg-country-alt: $color-svg-country;
+// $color-svg-route: #682317;
+// $color-country-shadow: #d8c291;
+// $font-map: 'Medieval Sharp';
+
+.svg__routeMap {
+    background: $color-svg-background;
+}
+
+pattern {
+    rect {
+        fill: $color-svg-country-alt;
+    }
+    path {        
+        stroke: $color-svg-country;
+    }
+}
+
+.svg__world {
+    path {
+        fill: $color-svg-country;
+        filter: drop-shadow( 0 5px 5px $color-country-shadow);
+    }
+}
+
+.svg__routes {
+    .svg__route {
+        fill: none;
+        stroke: $color-svg-route;
+        mix-blend-mode: multiply;
+    }
+    .svg__dashroute {
+        fill: none;
+        stroke: none;
+    }
+}
+
+.svg__timer {
+    padding: 0.5em 0.8em;
+    color: $color-svg-country;
+    background: $color-svg-background;
+    float: right;
+}
+
+button.timeline__controls {
+    padding: 0.5em 1em;
+    background: $color-svg-country;
+    color: $color-svg-background;
+    
+    border: $color-svg-country solid 2px;
+    border-radius: 5px;
+    transition: .2s all;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-svg-country;
+        background: $color-svg-background;
+    }
+
+    &:focus {
+        color: $color-svg-country;
+        background: $color-svg-background;
+    }
+}
+
+h1,h2 {
+    text-align: center;    
+}
+
+.timeline__controls--progress {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 400px; /* Full-width */
+    height: 5px; /* Specified height */
+    margin: 20px 0;
+    background: $color-svg-country; /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    float: right;
+  }
+
+  .timeline__controls--progress::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: $color-svg-country; /* Green background */
+    border: none;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .timeline__controls--progress::-moz-range-thumb {
+    width: 10px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: $color-svg-country; /* Green background */
+    border: none;
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.timeline__container {
+    padding: 10px;
+    background: $color-svg-background;
+    font-family: $font-map;
+}
+
+.svg__routepoint {
+    fill: $color-svg-route;
+    z-index: 999;
+  }
+
+.section__header {
+    margin-bottom: 40px;
+}

@@ -1,0 +1,313 @@
+/* Typography */
+
+html, body {
+    line-height: 1.333333333;
+
+  }
+  
+  body {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  
+  @media (min-width: 740px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  .primary,
+  a.primary {
+    color: #F64E4D;
+  }
+  
+
+  
+  /* Layout */
+  
+  .section {
+    display: flex;
+    width: 100%;
+  }
+  
+  .inverted-section {
+    background-color: #F6F4F2;
+    color: #2E2C2C;
+  }
+  
+  /* Features */
+  
+  .feature-section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    transition: opacity .25s ease;
+  }
+
+  
+  .timeline {
+    position: relative;
+    width: 1082px;
+    z-index: 1;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    height: 8px;
+  }
+  
+  .animation {
+    position: relative;
+    overflow: visible;
+    display: flex;
+  }
+  
+  .animation-band {
+    position: relative;
+    height: 70px;
+    margin: 0 1px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    flex: 1 1;
+  } 
+
+
+  .timeline-section {
+    display: flex;
+    align-items: center;
+    width: 1082px;
+    height: 420px;
+    margin-left: -541px;
+    margin-top: -171px;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-labels-top {
+    display: flex;
+    margin-top: 104px;
+  }
+
+  .info-labels-bottom {
+    display: flex;
+    margin-top: 33px;
+  }
+    
+  .animation-band span {
+      font-size: 0.85em;
+      padding-left: 25px;
+  }
+
+  .animation-band:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0) #fff;
+      border-width: 35px 0 35px 20px;
+      width: 0;
+      height: 0;
+      z-index: 2;
+  }
+
+  .animation-band:first-child:before {
+    border-width: 0px
+  }
+
+  .animation-band-primary, .animation-band-secondary  {
+    cursor: pointer;
+  }
+
+
+  .animation-band:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0) #fff;
+    border-width: 35px 0 35px 20px;
+    width: 0;
+    height: 0;
+    z-index: 1;
+  }
+
+  .animation-business-case {
+    background-color: rgba(71,125,252,1);
+
+    &:after{
+      border-color: rgba(0, 0, 0, 0) rgba(71,125,252,1);
+    }
+
+    &:hover{
+      background-color: lighten( rgba(71,125,252,1), 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( rgba(71,125,252,1), 5%);
+      }
+    }
+  }
+
+  .animation-relationships {
+    background-color: #2e6bfc;
+
+    &:after{
+      border-color: rgba(0, 0, 0, 0) #2e6bfc;
+    }
+
+    &:hover{
+      background-color: lighten( #2e6bfc, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #2e6bfc, 5%);
+      }
+    }
+  }
+
+  .animation-design {
+    background-color: #034bf4;
+
+    &:after{
+      border-color: rgba(0, 0, 0, 0) #034bf4;
+    }
+
+    &:hover{
+      background-color: lighten( #034bf4, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #034bf4, 5%);
+      }
+    }
+  }
+
+  .animation-planning {
+    background-color: #033bc2;
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0) #033bc2;
+    }
+
+    &:hover{
+      background-color: lighten( #033bc2, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #033bc2, 5%);
+      }
+    }
+  }
+
+  .animation-launch {
+    background-color: #022c90;
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0) #022c90;
+    }
+
+    &:hover{
+      background-color: lighten( #022c90, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #022c90, 5%);
+      }
+    }
+  }
+
+  .animation-step-1 {
+    background-color: #2e6bfc;
+
+    &:after{
+      border-color: rgba(0, 0, 0, 0) #2e6bfc;
+    }
+
+    &:hover{
+      background-color: lighten( #2e6bfc, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #2e6bfc, 5%);
+      }
+    }
+  }
+
+  .animation-step-2 {
+    background-color: #034bf4;
+
+    &:after{
+      border-color: rgba(0, 0, 0, 0) #034bf4;
+    }
+
+    &:hover{
+      background-color: lighten( #034bf4, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #034bf4, 5%);
+      }
+    }
+  }
+
+  .animation-step-3 {
+    background-color: #033bc2;
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0) #033bc2;
+    }
+
+    &:hover{
+      background-color: lighten( #033bc2, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #033bc2, 5%);
+      }
+    }
+  }
+
+  .animation-step-4 {
+    background-color: #022c90;
+
+    &:after {
+      border-color: rgba(0, 0, 0, 0) #022c90;
+    }
+
+    &:hover{
+      background-color: lighten( #022c90, 5%);
+
+      &:after{
+        border-color: rgba(0, 0, 0, 0) lighten( #022c90, 5%);
+      }
+    }
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .grid-container {
+    width: 100%;
+    max-width: 1198px;
+    margin-left: auto;
+    margin-right: auto;
+  }
